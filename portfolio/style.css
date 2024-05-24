@@ -1,0 +1,249 @@
+body{
+    background-image: url("portfolio.jpg");
+    background-repeat: no-repeat;
+    background-size: 200%;
+}
+.about {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+.about h2 {
+    font-size: 24px;
+    color: #333;
+    transition: transform color 0.6s linear;
+    transition: background-color 0.6s linear;
+    cursor: pointer;
+}
+.about h2:hover{
+    color:tan;
+    background-color: teal;
+}
+
+.about img {
+    border-radius: 20%;
+    margin-top: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    transition: color 0.6s linear;
+    transition: background-color 0.6s linear;
+    font-weight: bolder;
+}
+.about p:hover{
+    color: tan;
+    background-color: teal;
+}
+
+.about .button {
+    display: inline-block;
+    background-color:gray;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.about .button:hover {
+    background-color:#f80;
+}
+
+.skills {
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 105px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .skills h3 {
+    font-size: 24px;
+    color: #333; 
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+
+  .skills p {
+    font-size: 16px;
+    line-height: 1.6;
+    transition: color 0.6s linear;
+    transition: background-color 0.6s linear;
+  }
+  .skills p:hover{
+    color:blue; 
+    background-color:thistle;
+  }
+
+.projects {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 110px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .projects h4 {
+    font-size: 24px;
+    color: #333; 
+    font-weight: bolder;
+  }
+  
+ 
+  .projects p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+
+  .projects ul {
+    margin-top: 20px;
+    padding-left: 20px;
+    font-weight: bolder;
+  }
+  
+  
+  .projects ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; 
+  }
+
+.triumph {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .triumph p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    text-align: center;
+  }
+  
+  
+  .triumph h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center; 
+  }
+  
+  .triumph ul {
+    margin-top: 20px;
+    padding-left: 0;
+    list-style: none; 
+  }
+  
+  .triumph ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    text-align: left; 
+    margin-bottom: 10px;
+  }
+  
+  
+  .triumph b {
+    font-weight: bold;
+    color: #0088cc; 
+  }
+  
+
+.navbar{
+    background-color:thistle; 
+    color: white;     
+    padding: 10px 10px;     
+    margin-bottom: 20px;    
+    display: flex; 
+    list-style: none; 
+    cursor: pointer;
+    border-radius: 20px;
+}
+.navbar li{
+    margin: 0 65px;
+    font-weight: bolder;
+}
+.navbar ul{
+    display:contents;
+    justify-content: space-between;
+}
+.navbar a{
+    text-decoration:none;
+    color: black;
+    transition: color 0.5s ease;
+}
+.navbar a:hover{
+    color:tomato;
+}
+h1{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: color 0.6s linear;
+    transition: transform color 0.6s linear;
+    transition: background-color 0.6s linear;
+    cursor: pointer;
+}
+h1:hover{
+    color:#f80;
+    background-color:teal;
+}
+/* Style for the contactus container */
+.contactus {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Style for the heading */
+.contactus h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style for the paragraph */
+.contactus p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Style for the social media icons */
+.social-media {
+  list-style: none;
+  padding: 0;
+}
+
+.social-media li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-media li:last-child {
+  margin-right: 0;
+}
+
+.social-media a img {
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  border-radius: 50%; /* Make the images circular */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Hover effect for social media icons */
+.social-media a img:hover {
+  transform: scale(1.1); /* Scale the image slightly on hover */
+}
+
+  
