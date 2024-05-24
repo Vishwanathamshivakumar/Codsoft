@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="Calculator">The Number Tool</h1>
+    <div class="Calculator">
+        <input type="text" class="display" value="0">
+        <div class="buttons">
+          
+            <button class="number" id="7">7</button>
+            <button class="number" id="8">8</button>
+            <button class="number" id="9">9</button>
+          
+            <button class="operator" id="add">+</button>
+            
+            
+            <button class="number" id="4">4</button>
+            <button class="number" id="5">5</button>
+            <button class="number" id="6">6</button>
+
+            <button class="operator" id="subtract">-</button>
+
+            <button class="number" id="1">1</button>
+            <button class="number" id="2">2</button>
+            <button class="number" id="3">3</button>
+
+            
+            <button class="operator" id="multiply">*</button>
+            
+            <button class="operator" id="0">0</button>
+            <button class="operator" id="divide">/</button>
+            <button class="operator" id="equals">=</button>
+            
+            <button class="clear" id="c">C</button>
+            
+            <button class="decimal" id=".">.</button>
+            
+        </div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        const display = document.querySelector(".display");
+        let currentInput = "";
+        let currentOperator = "";
+        let previousInput = "";
+    
+        function updateDisplay() {
+            display.value = currentInput === "" ? "0" : currentInput;
+        }
+    
+        function clearDisplay() {
+            currentInput = "";
+            updateDisplay();
+        }
+    
+        function handleNumberClick(number) {
+            if (currentInput === "0") {
+                currentInput = "";
+            }
+            currentInput += number;
+            updateDisplay();
+        }
+    
+        function handleOperatorClick(operator) {
+            if (currentInput !== "") {
+                if (previousInput !== "") {
+                    calculate();
+                }
+                previousInput = currentInput;
+                currentInput = "";
+                currentOperator = operator;
+            }
+        }
+    
+        function handleDecimalClick() {
+            if (!currentInput.includes(".")) {
+                currentInput += ".";
+                updateDisplay();
+            }
+        }
+    
+        function calculate() {
+            const num1 = parseFloat(previousInput);
+            const num2 = parseFloat(currentInput);
+            let result;
+            switch (currentOperator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+                default:
+                    return;
+            }
+            currentInput = result.toString();
+            previousInput = "";
+            currentOperator = "";
+            updateDisplay();
+        }
+    
+        document.querySelectorAll('.number').forEach(button => {
+            button.addEventListener('click', () => handleNumberClick(button.textContent));
+        });
+    
+        document.querySelectorAll('.operator').forEach(button => {
+            button.addEventListener('click', () => handleOperatorClick(button.textContent));
+        });
+    
+        document.querySelector('.decimal').addEventListener('click', handleDecimalClick);
+        document.querySelector('.clear').addEventListener('click', clearDisplay);
+    
+        document.querySelector('.calculate').addEventListener('click', calculate);
+    });
+</script>
+</body>
+</html>
